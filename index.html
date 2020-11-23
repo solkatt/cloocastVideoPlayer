@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Video Player</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+	<link rel="stylesheet" href="./player.css" />
+</head>
+
+<body>
+	<div class="ui huge menu">
+		<div class="ui container">
+			<a href="#" class="header item">
+				<img class="logo"
+					src="https://cloocast.se/assets/logo-app-menu-8e1261a1d40dd0e29a53b558efbe3796bffd24f4dd88996db2a6793df2555e4e.svg" />
+			</a>
+
+			<a href="#" class="item">Home</a>
+			<div class="ui simple dropdown item">
+				Dropdown <i class="dropdown icon"></i>
+				<div class="menu">
+					<a class="item" href="#">Link Item</a>
+					<a class="item" href="#">Link Item</a>
+					<div class="divider"></div>
+					<div class="header">Header Item</div>
+					<div class="item">
+						<i class="dropdown icon"></i>
+						Sub Menu
+						<div class="menu">
+							<a class="item" href="#">Link Item</a>
+							<a class="item" href="#">Link Item</a>
+						</div>
+					</div>
+					<a class="item" href="#">Link Item</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--      -------------       -->
+
+	<!-- <div id="hide-chapter-menu">
+		<i id="chapter-menu-btn" class="caret square left outline icon"></i>
+	</div> -->
+
+	<div class="ui two column stackable grid">
+
+		<div id="chapters-container" class="four wide column">
+
+
+
+			<div id="chapter-header" class="ui sizer vertical center aligned raised segment">
+				<div class="ui huge header">
+					Online Freelancing Course Essentials
+
+				</div>
+				<p>Kurs Kursson</p>
+			</div>
+			<div class="ui tiny green progress attached">
+				<div class="bar">
+					<div class="progress"></div>
+				</div>
+				<!-- <div class="label">10% Progress</div> -->
+			</div>
+
+
+
+
+
+
+
+			<div class="ui segment">
+				<div id="acc-styled" class="ui styled accordion">
+
+					<div id="chapter-heading" class="title">
+						<div class="chapter-progress-circle">
+							<svg class="progress-ring" height="22" width="22">
+								<circle class="progress-ring__circle" r="9" cx="11" cy="11" />
+							</svg>
+							<input value="35" type="number" step="5" min="0" max="100" placeholder="progress" />
+						</div>
+
+						<span id="chapter-title">Välkommen</span>
+
+						<p class="chapter-time">04:32</p>
+						<i class="dropdown icon"></i>
+					</div>
+					<div class="content">
+						<p>I det här avsnittet behandlar vi de grundläggande koncepten och förberedelse för att kicka
+							igång kursen.
+							<br>
+							<br>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem praesentium cupiditate in
+							nisi quos.
+
+					</div>
+
+
+					<div id="chapter-heading" class="title">
+						<div class="chapter-progress-circle">
+							<svg class="progress-ring" height="22" width="22">
+								<circle class="progress-ring__circle" r="9" cx="11" cy="11" />
+							</svg>
+						</div>
+						<span id="chapter-title">Introduktion</span>
+						<p class="chapter-time">03:54</p>
+
+						<i class="dropdown icon"></i>
+					</div>
+					<div class="content">
+						<p>I det här avsnittet behandlar vi de grundläggande..
+					</div>
+
+
+
+					<div id="chapter-heading" class="title">
+						<div class="chapter-progress-circle">
+							<svg class="progress-ring" height="22" width="22">
+								<circle class="progress-ring__circle" r="9" cx="11" cy="11" />
+							</svg>
+						</div>
+						<span id="chapter-title">Överblick</span>
+						<p class="chapter-time">06:41</p>
+
+						<i class="dropdown icon"></i>
+					</div>
+					<div class="content">
+						<p>I det här avsnittet behandlar vi de grundläggande..
+					</div>
+
+
+
+
+
+					<div id="chapter-heading" class="title">
+						<div class="chapter-progress-circle">
+							<svg class="progress-ring" height="22" width="22">
+								<circle class="progress-ring__circle" r="9" cx="11" cy="11" />
+							</svg>
+						</div>
+						<span id="chapter-title">Setup</span>
+
+						<p class="chapter-time">09:25</p>
+
+						<i class="dropdown icon"></i>
+					</div>
+					<div class="content">
+						<p>I det här avsnittet behandlar vi de grundläggande förberedelserna.
+					</div>
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+		<div id="course-page" class="twelve wide column">
+
+			<div id="video-container">
+				<video preload="auto">
+					<source src="./assets/video.mp4" type="video/mp4" />
+					Your browser does not support the video tag.
+				</video>
+				<div id="controls-container">
+
+					<div id="video-controls">
+						<button class="play">
+							<i id="playIcon" class="play icon"></i>
+						</button>
+
+
+						<div id="timeline-controls">
+							<img class="control-logo" src="./logo-owl.svg">
+
+							<div class="video-progress">
+								<progress id="progress-bar" value="0" min="0" max="100"></progress>
+								<input class="seek" id="seek" value="0" min="0" max="100" type="range" step="0.1">
+								<div class="seek-tooltip" id="seek-tooltip">00:00</div>
+							</div>
+
+
+
+
+							<div class="time-remaining">
+								<time id="time-elapsed">00:00</time>
+								/
+								<time id="duration">00:00</time>
+							</div>
+						</div>
+
+
+
+
+						<button class="volume">
+							<i id="volumeIcon" class="volume up icon"></i>
+							<input id="volume-slider" orient="vertical" type="range" name="volume" class="volume-slider"
+								min="0" max="1" step="0.05" value="1">
+						</button>
+
+						<button class="next">
+							<i class="step forward icon"></i>
+						</button>
+
+
+						<button class="settings">
+							<div id="playback-btn" class="ui icon bottom right pointing dropdown button">
+								<p id="playback-rate">1x</p>
+								<div id="playback-menu" class="menu">
+									<div id="playback-rate-50-btn" class="item">.5x</div>
+									<div id="playback-rate-75-btn" class="item">.75x</div>
+									<div id="playback-rate-1-btn" class="item">1x</div>
+									<div id="playback-rate-125-btn" class="item">1.25x</div>
+									<div id="playback-rate-150-btn" class="item">1.5x</div>
+								</div>
+							</div>
+						</button>
+
+						<button class="fullscreen">
+							<i id="fullscreenIcon" class="expand icon"></i>
+						</button>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- <button class="ui right aligned button">Nästa</button> -->
+
+
+
+		</div>
+
+
+		<div id="bottom-menu" class="ui bottom fixed huge borderless menu">
+			<div class="item">
+				<div id="bottom-title" class="ui huge header">
+					Introduktion
+				</div>
+			</div>
+			<div class="right menu">
+				<div class="item">
+					<button class="ui basic primary button">
+						Slutför & Fortsätt
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script src="./script.js"></script>
+	<script src="./videoplayer.js"></script>
+</body>
+
+</html>
